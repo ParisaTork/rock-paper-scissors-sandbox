@@ -37,10 +37,19 @@ const getRandomMove = () => {
   };
   
   const updateDOM = (moveOne, moveTwo, outcome) => {
-    // TODO Implement this method to update the DOM
-    // There are some images you can use in the images directory
+    // Display move images
+    document.getElementById("player-one-move__img").src = "images/" + moveOne + ".png";
+    document.getElementById("player-two-move__img").src = "images/" + moveTwo + ".png";
+
+    // Display move text
+    document.getElementById("player-one-move__name").textContent = moveOne;
+    document.getElementById("player-two-move__name").textContent = moveTwo;
+
+    // Display result
+    document.getElementById("result").textContent = outcome;
   };
   
   const playButton = document.getElementById("play-btn");
   playButton.addEventListener("click", playGame);
+
   
